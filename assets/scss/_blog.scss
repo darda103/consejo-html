@@ -1,0 +1,57 @@
+.blog {
+	padding: 60px 0;
+	.blog-d {
+		transition: 0.6s;
+		margin-bottom: 30px;
+		.b-img {
+			height: 200px;
+			overflow: hidden;
+			img {
+				width: 100%;
+				transition: 0.6s;
+			}
+		}
+		.text {
+			padding: 10px 20px;
+			h3 {
+				font-size: 20px;
+				font-weight: 600;
+				text-transform: capitalize;
+				margin: 20px 0;
+				transition: 0.6s;
+			}
+			p {
+				font-size: 15px;
+			}
+			button {
+				height: 40px;
+				line-height: 40px;
+				text-transform: uppercase;
+				font-size: 15px;
+				font-weight: 600;
+				padding: 0 20px;
+				margin: 20px 0;
+				background: $c2;
+				border: 1px solid $c2;
+				outline: none;
+				transition: 0.6s;
+				&:hover {
+					background: transparent;
+					color: $c3;
+				}
+			}
+		}
+		&:hover {
+			.b-img {
+				img {
+					transform: scale(1.1);
+				}
+			}
+			.text {
+				h3 {
+					color: $c1;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,129 @@
+.scroll {
+	position: fixed;
+	bottom: 20px;
+    right: 20px;
+    z-index: 10;
+	display: none;
+	i {
+		font-size: 30px;
+		color: $c2;
+		transition: all 0.4s;
+		cursor: pointer;
+		&:hover {
+			color: $c1;
+		}
+	}
+}
+
+.header {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 10;
+	transition: 0.6s;
+	&.fixed-header {
+		background: rgba($kalo, 0.8);
+		border-bottom: 5px solid $c2;
+		position: fixed;
+		transition: 0.6s;
+	}
+	.logo {
+		img {
+			max-width: 100%;
+		}
+	}
+	.navbar {
+		padding: 0;
+		.navbar-nav {
+			.nav-item {
+				padding: 30px 20px;
+				transition: 0.6s;
+				.nav-link {
+					padding: 10px 0;
+					text-transform: uppercase;
+					font-size: 15px;
+					color: $sada;
+					font-weight: 600;
+					overflow: hidden;
+					transition: 0.3s;
+					i {
+						margin-left: 10px;
+					}
+					&.hvr {
+						position: relative;
+						&:after {
+							position: absolute;
+							content: "\f063";
+							font-family: "Font Awesome 5 Free";
+							font-weight: 900;
+							width: 10px;
+							height: 10px;
+							top: -50%;
+							left: 50%;
+							transform: translate(-50%, -50%);
+							transition: 0.6s;
+						}
+						&:hover {
+							&:after {
+								top: 0;
+							}
+						}
+					}
+				}
+				&.dropdown {
+					.dropdown-menu {
+						display: block;
+						opacity: 0;
+						visibility: hidden;
+						margin: 0;
+						margin-top: 20px;
+						transition: 0.6s;
+						border-radius: 0;
+						background: $sada;
+						border: 0;
+						border-bottom: 3px solid $c1;
+						padding: 0;
+						z-index: 1;
+						.dropdown-item {
+							font-size: 15px;
+							text-transform: uppercase;
+							font-weight: 600;
+							padding: 10px 20px;
+							position: relative;
+							z-index: 2;
+							&:after {
+								position: absolute;
+								content: "";
+								top: 0;
+								left: 0;
+								width: 0;
+								height: 100%;
+								background: $c2;
+								transition: 0.6s;
+								z-index: -1;
+							}
+							&:hover {
+								&:after {
+									width: 100%;
+								}
+							}
+							&:active {
+								background: transparent;
+								color: $kalo;
+							}
+						}
+					}
+					&:hover {
+						.dropdown-menu {
+							opacity: 1;
+							visibility: visible;
+							display: block;
+							margin-top: 0px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

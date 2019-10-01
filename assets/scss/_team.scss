@@ -1,0 +1,127 @@
+.team {
+	padding: 60px 0;
+	.profile {
+		text-align: center;
+		margin: 30px 0;
+		transition: 0.6s;
+		.img {
+			height: 300px;
+			overflow: hidden;
+			position: relative;
+			img {
+				width: 100%;
+			}
+			.hvr {
+				position: absolute;
+				top: 222px;
+				left: 0;
+				width: 100%;
+				transition: 0.6s;
+				h6 {
+					margin: 0 auto;
+					padding: 5px 0;
+					font-weight: 600;
+					font-size: 16px;
+					text-transform: uppercase;
+					width: 60%;
+					z-index: 2;
+					position: relative;
+					&:after {
+						content: "";
+						position: absolute;
+						z-index: -1;
+						top: 0;
+						left: 0;
+						width: 60%;
+						height: 100%;
+						transform: skewX(-25deg);
+						border-radius: 5px 0 0 0;
+						background: $c1;
+					}
+					&:before {
+						content: "";
+						position: absolute;
+						z-index: -1;
+						top: 0;
+						right: 0;
+						width: 60%;
+						height: 100%;
+						transform: skewX(25deg);
+						border-radius: 0 5px 0 0;
+						background: $c1;
+					}
+				}
+				h2 {
+					font-size: 20px;
+					font-weight: 700;
+					text-transform: capitalize;
+					background: $sada;
+					margin: 0;
+					padding: 10px 0;
+					border-top: 2px solid $c3;
+					border-bottom: 2px solid $c1;
+				}
+				.social {
+					text-align: center;
+					padding: 10px 0;
+					background: linear-gradient(to left, $c3, $c2);
+					i {
+						height: 30px;
+						width: 30px;
+						line-height: 30px;
+						text-align: center;
+						border: 1px solid $kalo;
+						color: $kalo;
+						margin: 0 2px;
+						cursor: pointer;
+						transition: 0.6s;
+						&.fb {
+							&:hover {
+								background: $fb;
+								color: $sada;
+								text-shadow: 2px 2px $kalo;
+								border-color: $fb;
+								border-radius: 5px;
+							}
+						}
+						&.tw {
+							&:hover {
+								background: $tw;
+								color: $sada;
+								text-shadow: 2px 2px $kalo;
+								border-color: $tw;
+								border-radius: 5px;
+							}
+						}
+						&.in {
+							&:hover {
+								background: $in;
+								color: $sada;
+								text-shadow: 2px 2px $kalo;
+								border-color: $in;
+								border-radius: 5px;
+							}
+						}
+						&.li {
+							&:hover {
+								background: $li;
+								color: $sada;
+								text-shadow: 2px 2px $kalo;
+								border-color: $li;
+								border-radius: 5px;
+							}
+						}
+					}
+				}
+			}
+		}
+		&:hover {
+			box-shadow: 0px 8px 12px -7px $kalo;
+			.img {
+				.hvr {
+					top: 58%;
+				}
+			}
+		}
+	}
+}

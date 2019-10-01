@@ -1,0 +1,35 @@
+.service {
+	padding: 60px 0;
+	.service-box {
+		text-align: center;
+		padding: 15px;
+		transition: 0.6s;
+		margin-bottom: 50px;
+		i {
+			height: 60px;
+			width: 60px;
+			color: $sada;
+			font-size: 20px;
+			line-height: 60px;
+			text-align: center;
+			border-radius: 50px;
+			background: linear-gradient(to left, $c2, $c3);
+			margin: 20px 0;
+			text-shadow: 2px 2px $kalo;
+		}
+		h2 {
+			font-weight: 600;
+			font-size: 20px;
+			text-transform: capitalize;
+			margin: 0;
+			padding: 20px 0;
+		}
+		p {
+			font-size: 15px;
+			text-align: center;
+		}
+		&:hover {
+			box-shadow: 0px 9px 20px -11px $kalo;
+		}
+	}
+}
